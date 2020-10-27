@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Name: {{ topic_name }}</p>
+<p>Length: {{ topic_length }}</p>
+{% if courses %}
+    <h2>List of Course</h2>
+    <ol>
+        {% for course in courses  %}
+            <li>{{ course }}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>There is no available Course related to {{ topic_name }}</p>
+{% endif %}
+</body>
+</html>
